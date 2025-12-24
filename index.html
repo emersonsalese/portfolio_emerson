@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerson Sales | Creative Developer</title>
+    <meta name="description" content="Portfólio de Emerson Sales. Creative Developer focado em WordPress, Interações e Performance.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Styles for things Tailwind can't strictly cover without config */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .noise-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Subtle marquee animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            animation: scroll 20s linear infinite;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a3e635;
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-neutral-950 text-neutral-300 antialiased selection:bg-lime-400 selection:text-neutral-950 overflow-x-hidden">
+
+    <!-- Noise Overlay -->
+    <div class="noise-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Modified Logo from previous code -->
+            <a href="#" class="group flex items-center gap-3">
+                <div class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center border border-white/5 group-hover:bg-lime-400 group-hover:text-black group-hover:border-lime-400 transition-colors duration-500">
+                    <span class="text-xs font-bold text-white group-hover:text-black tracking-tighter transition-colors">ES</span>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium tracking-tight">
+                <a href="#expertise" class="hover:text-lime-400 transition-colors">Stack</a>
+                <a href="#work" class="hover:text-lime-400 transition-colors">Trabalhos</a>
+                <a href="#process" class="hover:text-lime-400 transition-colors">Processo</a>
+                <a href="#contact" class="hover:text-lime-400 transition-colors">Contato</a>
+            </div>
+
+            <a href="https://wa.me/5581987423141?text=Ol%C3%A1%20Emerson%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho." class="hidden md:flex items-center gap-2 text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-lime-400 transition-colors duration-300">
+                Vamos conversar
+                <iconify-icon icon="lucide:arrow-up-right" width="16"></iconify-icon>
+            </a>
+            
+            <!-- Mobile Menu Icon -->
+            <button class="md:hidden text-white">
+                <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col justify-center pt-20 px-6 overflow-hidden">
+        <!-- Abstract Background Elements -->
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-10 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto w-full z-10">
+            <div class="mb-8 flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full border border-white/10 text-xs font-medium text-lime-400 bg-lime-400/5 tracking-wide uppercase">
+                    Portfólio Emerson Sales
+                </span>
+            </div>
+
+            <h1 class="text-5xl md:text-8xl lg:text-9xl font-medium text-white tracking-tighter leading-[0.9] mb-8">
+                desenvolvedor <br>
+                <span class="text-neutral-600">front-end wordpress.</span>
+            </h1>
+
+            <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-12 mt-12 border-t border-white/10 pt-8">
+                <div class="max-w-xl">
+                    <p class="text-lg md:text-xl text-neutral-400 leading-relaxed font-light">
+                        Sou <span class="text-white font-medium">Emerson Sales</span>, desenvolvedor front-end especializado na criação de experiências digitais imersivas, com forte atenção à performance e à otimização para mecanismos de busca. Desenvolvo sites em WordPress e também através de código, utilizando HTML, CSS, JavaScript e PHP.
+                    </p>
+                </div>
+                
+                <div class="flex gap-4">
+                     <a href="#work" class="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-lime-400 transition-all duration-300 hover:w-32 hover:justify-start hover:pl-4">
+                        <div class="absolute right-3 flex items-center justify-center text-black">
+                            <iconify-icon icon="lucide:arrow-down" width="20" class="group-hover:rotate-45 transition-transform duration-300"></iconify-icon>
+                        </div>
+                        <span class="opacity-0 whitespace-nowrap text-sm font-semibold text-black transition-all duration-300 group-hover:opacity-100">
+                            Ver Projetos
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Infinite Marquee -->
+    <section class="border-y border-white/5 py-6 overflow-hidden bg-neutral-900/50">
+        <div class="flex gap-12 w-max animate-scroll">
+            <!-- Content duplicated for seamless loop -->
+            <div class="flex gap-12 items-center text-4xl md:text-6xl font-medium tracking-tighter text-outline opacity-30 select-none">
+                <span>WORDPRESS</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>FRONT-END</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>SEO TÉCNICO</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>UI/UX DESIGN</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>PERFORMANCE</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>STRATEGY</span>
+                <span class="text-lime-400 text-2xl">●</span>
+            </div>
+             <div class="flex gap-12 items-center text-4xl md:text-6xl font-medium tracking-tighter text-outline opacity-30 select-none">
+                <span>WORDPRESS</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>FRONT-END</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>SEO TÉCNICO</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>UI/UX DESIGN</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>PERFORMANCE</span>
+                <span class="text-lime-400 text-2xl">●</span>
+                <span>STRATEGY</span>
+                <span class="text-lime-400 text-2xl">●</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Stack -->
+    <section id="expertise" class="py-24 bg-neutral-900/30 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 md:flex justify-between items-end">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-medium tracking-tighter text-white mb-4">Arsenal <br>Técnico</h2>
+                </div>
+                <p class="text-neutral-400 max-w-sm text-sm md:text-base mt-4 md:mt-0">
+                    Um stack abrangente focado em conversão, velocidade e escalabilidade.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="group p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-lime-400/30 transition-all duration-500 rounded-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 group-hover:text-lime-400 transition-all duration-500">
+                        <iconify-icon icon="lucide:monitor-smartphone" width="32"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-4 tracking-tight">WordPress Ecosystem</h3>
+                    <ul class="space-y-2 text-sm text-neutral-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Temas Customizados</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Elementor Pro Avançado</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>HTML5 & Semantic CSS3</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Otimização de Performance</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-lime-400/30 transition-all duration-500 rounded-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 group-hover:text-lime-400 transition-all duration-500">
+                        <iconify-icon icon="lucide:trending-up" width="32"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-4 tracking-tight">Dados & Growth</h3>
+                    <ul class="space-y-2 text-sm text-neutral-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Google Analytics 4 (GA4)</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Google Tag Manager</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Auditoria SEO Técnico</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Core Web Vitals</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-lime-400/30 transition-all duration-500 rounded-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 group-hover:text-lime-400 transition-all duration-500">
+                        <iconify-icon icon="lucide:pen-tool" width="32"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-4 tracking-tight">Design & Interface</h3>
+                    <ul class="space-y-2 text-sm text-neutral-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Figma Prototyping</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Design Systems</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>UI/UX Design</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime-400 rounded-full"></span>Arquitetura de Landing Page</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Works (Asymmetric Grid) -->
+    <section id="work" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-4xl md:text-5xl font-medium tracking-tighter text-white">Projetos Recentes</h2>
+                <span class="text-neutral-500 text-sm hidden md:block">(2023 — 2025)</span>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1 (Large) - Keymob -->
+                <a href="https://keymob.com.br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group block md:col-span-2">
+
+                        <div class="relative aspect-[21/9] bg-neutral-900 overflow-hidden
+                                    border border-white/5 hover:border-lime-400/50
+                                    transition-colors duration-500">
+
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+
+                            <!-- Imagem -->
+                            <img 
+                                src="imgs/keymob.png"
+                                alt="Keymob Imobiliária"
+                                class="absolute inset-0 w-full h-full object-cover
+                                    scale-100 group-hover:scale-105
+                                    transition-transform duration-700"
+                            />
+
+                        <!-- Conteúdo -->
+                        <div class="absolute bottom-0 left-0 p-8 z-20 w-full flex justify-between items-end">
+                            <div>
+                                <p class="text-lime-400 text-xs font-medium uppercase tracking-wider mb-2">
+                                    site corporativo
+                                </p>
+                                <h3 class="text-3xl text-white font-medium tracking-tight">
+                                    Keymob Imobiliária
+                                </h3>
+                            </div>
+
+                            <div class="hidden md:block">
+                                <ul class="flex gap-3 text-xs text-neutral-400">
+                                    <li class="px-3 py-1 border border-white/10 rounded-full">UX/UI Design</li>
+                                    <li class="px-3 py-1 border border-white/10 rounded-full">WordPress</li>
+                                    <li class="px-3 py-1 border border-white/10 rounded-full">Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2 - Guilherme Barber -->
+                 
+                <a href="https://guilhermebarber.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group block">
+
+                    <div class="relative aspect-square md:aspect-[4/3] bg-neutral-900 overflow-hidden
+                                border border-white/5 hover:border-lime-400/50
+                                transition-colors duration-500">
+
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+
+                        <!-- Imagem -->
+                        <img 
+                            src="imgs/guilherme_barber.png"
+                            alt="Guilherme Barber"
+                            class="absolute inset-0 w-full h-full object-cover
+                                scale-100 group-hover:scale-105
+                                transition-transform duration-700"
+                        />
+
+                        <!-- Conteúdo -->
+                        <div class="absolute bottom-0 left-0 p-8 z-20">
+                            <p class="text-lime-400 text-xs font-medium uppercase tracking-wider mb-2">
+                                Landing Page
+                            </p>
+                            <h3 class="text-2xl text-white font-medium tracking-tight">
+                                Guilherme Barber
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Project 3 - Estaf Equipamentos -->
+                <a href="https://estaf.com.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group block">
+
+                    <div class="relative aspect-square md:aspect-[4/3] bg-neutral-900 overflow-hidden
+                                border border-white/5 hover:border-lime-400/50
+                                transition-colors duration-500">
+
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+
+                        <!-- Imagem -->
+                        <img 
+                            src="imgs/estaf.png"
+                            alt="Estaf Equipamentos"
+                            class="absolute inset-0 w-full h-full object-cover
+                                scale-100 group-hover:scale-105
+                                transition-transform duration-700"
+                        />
+
+                        <!-- Conteúdo -->
+                        <div class="absolute bottom-0 left-0 p-8 z-20">
+                            <p class="text-lime-400 text-xs font-medium uppercase tracking-wider mb-2">
+                                Site corporativo
+                            </p>
+                            <h3 class="text-2xl text-white font-medium tracking-tight">
+                                Estaf Equipamentos
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            
+            <div class="mt-8 text-center">
+                <a href="https://wa.me/5581987423141?text=Ol%C3%A1%20Emerson%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho." class="inline-block text-sm text-neutral-400 border-b border-neutral-700 pb-1 hover:text-white hover:border-white transition-colors">Entre em contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-24 bg-white/[0.02] border-y border-white/5 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-medium tracking-tighter text-white mb-16 text-center md:text-left">Workflow</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-6 left-0 w-full h-px bg-white/10 -z-10"></div>
+
+                <!-- Step 1 -->
+                <div class="relative group">
+                    <div class="w-12 h-12 bg-neutral-900 border border-white/10 rounded-full flex items-center justify-center text-lg font-medium text-white mb-6 group-hover:border-lime-400 group-hover:text-lime-400 transition-colors z-10">1</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Descoberta</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed">Análise de lacunas de mercado e estruturação dos requisitos de SEO técnico antes de qualquer linha de código.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative group">
+                    <div class="w-12 h-12 bg-neutral-900 border border-white/10 rounded-full flex items-center justify-center text-lg font-medium text-white mb-6 group-hover:border-lime-400 group-hover:text-lime-400 transition-colors z-10">2</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Design & UI/UX</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed">Prototipagem no Figma focada na retenção do usuário e hierarquia visual.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative group">
+                    <div class="w-12 h-12 bg-neutral-900 border border-white/10 rounded-full flex items-center justify-center text-lg font-medium text-white mb-6 group-hover:border-lime-400 group-hover:text-lime-400 transition-colors z-10">3</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Desenvolvimento</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed">Código limpo, HTML/CSS/JS semântico ou temas WordPress customizados com foco em velocidade.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative group">
+                    <div class="w-12 h-12 bg-neutral-900 border border-white/10 rounded-full flex items-center justify-center text-lg font-medium text-white mb-6 group-hover:border-lime-400 group-hover:text-lime-400 transition-colors z-10">4</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Entrega & Growth</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed">Testes de performance, integração com GTM e estratégias de indexação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer / CTA -->
+    <footer id="contact" class="bg-white text-neutral-950 px-6 py-24 md:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-6xl md:text-8xl font-medium tracking-tighter mb-8">
+                        Vamos criar <br>
+                        <span class="text-neutral-400">o futuro.</span>
+                    </h2>
+                    <p class="text-lg text-neutral-600 max-w-md mb-12">
+                        Pronto para levar seu produto digital a outro nível? Entre em contato comigo.
+                    </p>
+                    
+                    <a href="mailto:emersonsalese@outlook.com" class="inline-flex items-center gap-3 text-2xl font-medium border-b-2 border-black pb-1 hover:text-neutral-600 hover:border-neutral-600 transition-colors">
+                        emersonsalese@outlook.com
+                        <iconify-icon icon="lucide:arrow-right" width="24"></iconify-icon>
+                    </a>
+                </div>
+
+                <div class="flex flex-col justify-end md:items-end">
+                    <nav class="flex flex-col gap-4 text-lg font-medium text-right">
+                        <a href="https://www.linkedin.com/in/emerson-sales-863775177/" class="hover:underline">LinkedIn</a>
+                        <a href="https://wa.me/5581987423141?text=Ol%C3%A1%20Emerson%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho." class="hover:underline">Whatsapp</a>
+                    </nav>
+                    <div class="mt-12 text-sm text-neutral-500 text-right">
+                        <p>&copy; 2025 Emerson Sales.</p>
+                        <p>Creative Developer & WordPress Specialist.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decoration -->
+        <div class="absolute bottom-[-10%] right-[-5%] text-[20rem] font-bold text-neutral-100 -z-0 pointer-events-none select-none tracking-tighter">
+            ES
+        </div>
+    </footer>
+
+</body>
+</html>
