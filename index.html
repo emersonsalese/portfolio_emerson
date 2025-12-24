@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emerson Sales | Creative Developer</title>
     <meta name="description" content="Portfólio de Emerson Sales. Creative Developer focado em WordPress, Interações e Performance.">
-    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,34 +65,28 @@
     <!-- Noise Overlay -->
     <div class="noise-bg"></div>
 
-    <!-- Navigation -->
     <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Modified Logo from previous code -->
-            <a href="#" class="group flex items-center gap-3">
-                <div class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center border border-white/5 group-hover:bg-lime-400 group-hover:text-black group-hover:border-lime-400 transition-colors duration-500">
-                    <span class="text-xs font-bold text-white group-hover:text-black tracking-tighter transition-colors">ES</span>
-                </div>
-            </a>
-            
-            <div class="hidden md:flex gap-8 text-sm font-medium tracking-tight">
-                <a href="#expertise" class="hover:text-lime-400 transition-colors">Stack</a>
-                <a href="#work" class="hover:text-lime-400 transition-colors">Trabalhos</a>
-                <a href="#process" class="hover:text-lime-400 transition-colors">Processo</a>
-                <a href="#contact" class="hover:text-lime-400 transition-colors">Contato</a>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="group flex items-center gap-3">
+            <div class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center border border-white/5 group-hover:bg-lime-400 group-hover:text-black group-hover:border-lime-400 transition-colors duration-500">
+                <span class="text-xs font-bold text-white group-hover:text-black tracking-tighter transition-colors">ES</span>
             </div>
-
-            <a href="https://wa.me/5581987423141?text=Ol%C3%A1%20Emerson%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho." class="hidden md:flex items-center gap-2 text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-lime-400 transition-colors duration-300">
-                Vamos conversar
-                <iconify-icon icon="lucide:arrow-up-right" width="16"></iconify-icon>
-            </a>
-            
-            <!-- Mobile Menu Icon -->
-            <button class="md:hidden text-white">
-                <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
-            </button>
+        </a>
+        
+        <div class="hidden md:flex gap-8 text-sm font-medium tracking-tight">
+            <a href="#expertise" class="hover:text-lime-400 transition-colors">Stack</a>
+            <a href="#work" class="hover:text-lime-400 transition-colors">Trabalhos</a>
+            <a href="#process" class="hover:text-lime-400 transition-colors">Processo</a>
+            <a href="#contact" class="hover:text-lime-400 transition-colors">Contato</a>
         </div>
-    </nav>
+
+        <a href="https://wa.me/5581987423141?text=Ol%C3%A1%20Emerson%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho." class="flex items-center gap-2 text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-lime-400 transition-colors duration-300">
+            <span class="whitespace-nowrap">Vamos conversar</span>
+            <iconify-icon icon="lucide:arrow-up-right" width="16"></iconify-icon>
+        </a>
+        
+        </div>
+</nav>
 
     <!-- Hero Section -->
     <header class="relative min-h-screen flex flex-col justify-center pt-20 px-6 overflow-hidden">
@@ -237,49 +231,45 @@
             <!-- Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Project 1 (Large) - Keymob -->
-                <a href="https://keymob.com.br"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="group block md:col-span-2">
+ <a href="https://keymob.com.br"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="group block md:col-span-2">
 
-                        <div class="relative aspect-[21/9] bg-neutral-900 overflow-hidden
-                                    border border-white/5 hover:border-lime-400/50
-                                    transition-colors duration-500">
+    <div class="relative aspect-square md:aspect-[21/9] bg-neutral-900 overflow-hidden
+               border border-white/5 hover:border-lime-400/50
+               transition-colors duration-500">
 
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
 
-                            <!-- Imagem -->
-                            <img 
-                                src="imgs/keymob.png"
-                                alt="Keymob Imobiliária"
-                                class="absolute inset-0 w-full h-full object-cover
-                                    scale-100 group-hover:scale-105
-                                    transition-transform duration-700"
-                            />
+        <img 
+            src="imgs/keymob.png"
+            alt="Keymob Imobiliária"
+            class="absolute inset-0 w-full h-full object-cover
+                   scale-100 group-hover:scale-105
+                   transition-transform duration-700"
+        />
 
-                        <!-- Conteúdo -->
-                        <div class="absolute bottom-0 left-0 p-8 z-20 w-full flex justify-between items-end">
-                            <div>
-                                <p class="text-lime-400 text-xs font-medium uppercase tracking-wider mb-2">
-                                    site corporativo
-                                </p>
-                                <h3 class="text-3xl text-white font-medium tracking-tight">
-                                    Keymob Imobiliária
-                                </h3>
-                            </div>
+        <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20 w-full flex justify-between items-end">
+            <div>
+                <p class="text-lime-400 text-xs font-medium uppercase tracking-wider mb-2">
+                    site corporativo
+                </p>
+                <h3 class="text-3xl text-white font-medium tracking-tight">
+                    Keymob Imobiliária
+                </h3>
+            </div>
 
-                            <div class="hidden md:block">
-                                <ul class="flex gap-3 text-xs text-neutral-400">
-                                    <li class="px-3 py-1 border border-white/10 rounded-full">UX/UI Design</li>
-                                    <li class="px-3 py-1 border border-white/10 rounded-full">WordPress</li>
-                                    <li class="px-3 py-1 border border-white/10 rounded-full">Development</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+            <div class="hidden md:block">
+                <ul class="flex gap-3 text-xs text-neutral-400">
+                    <li class="px-3 py-1 border border-white/10 rounded-full">UX/UI Design</li>
+                    <li class="px-3 py-1 border border-white/10 rounded-full">WordPress</li>
+                    <li class="px-3 py-1 border border-white/10 rounded-full">Development</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</a>
 
                 <!-- Project 2 - Guilherme Barber -->
                  
@@ -400,41 +390,41 @@
     </section>
     <!-- Footer / CTA -->
     <footer id="contact" class="bg-white text-neutral-950 px-6 py-24 md:py-32 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto relative z-10">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-6xl md:text-8xl font-medium tracking-tighter mb-8">
-                        Vamos criar <br>
-                        <span class="text-neutral-400">o futuro.</span>
-                    </h2>
-                    <p class="text-lg text-neutral-600 max-w-md mb-12">
-                        Pronto para levar seu produto digital a outro nível? Entre em contato comigo.
-                    </p>
-                    
-                    <a href="mailto:emersonsalese@outlook.com" class="inline-flex items-center gap-3 text-2xl font-medium border-b-2 border-black pb-1 hover:text-neutral-600 hover:border-neutral-600 transition-colors">
-                        emersonsalese@outlook.com
-                        <iconify-icon icon="lucide:arrow-right" width="24"></iconify-icon>
-                    </a>
-                </div>
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-5xl md:text-8xl font-medium tracking-tighter mb-8">
+                    Vamos criar <br>
+                    <span class="text-neutral-400">o futuro.</span>
+                </h2>
+                <p class="text-lg text-neutral-600 max-w-md mb-12">
+                    Pronto para levar seu produto digital a outro nível? Entre em contato comigo.
+                </p>
+                
+                <a href="mailto:emersonsalese@outlook.com" class="inline-flex flex-wrap items-center gap-2 md:gap-3 text-lg sm:text-2xl font-medium border-b-2 border-black pb-1 hover:text-neutral-600 hover:border-neutral-600 transition-colors break-all">
+                    emersonsalese@outlook.com
+                    <iconify-icon icon="lucide:arrow-right" width="24" class="shrink-0"></iconify-icon>
+                </a>
+            </div>
 
-                <div class="flex flex-col justify-end md:items-end">
-                    <nav class="flex flex-col gap-4 text-lg font-medium text-right">
-                        <a href="https://www.linkedin.com/in/emerson-sales-863775177/" class="hover:underline">LinkedIn</a>
-                        <a href="https://wa.me/5581987423141?text=Ol%C3%A1%20Emerson%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho." class="hover:underline">Whatsapp</a>
-                    </nav>
-                    <div class="mt-12 text-sm text-neutral-500 text-right">
-                        <p>&copy; 2025 Emerson Sales.</p>
-                        <p>Creative Developer & WordPress Specialist.</p>
-                    </div>
+            <div class="flex flex-col justify-end items-start md:items-end">
+                <nav class="flex flex-col gap-4 text-lg font-medium text-left md:text-right">
+                    <a href="https://www.linkedin.com/in/emerson-sales-863775177/" class="hover:underline">LinkedIn</a>
+                    <a href="https://wa.me/5581987423141?text=Ol%C3%A1%20Emerson%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho." class="hover:underline">Whatsapp</a>
+                </nav>
+                
+                <div class="mt-12 text-sm text-neutral-500 text-left md:text-right">
+                    <p>&copy; 2025 Emerson Sales.</p>
+                    <p>Creative Developer & WordPress Specialist.</p>
                 </div>
             </div>
         </div>
-        
-        <!-- Decoration -->
-        <div class="absolute bottom-[-10%] right-[-5%] text-[20rem] font-bold text-neutral-100 -z-0 pointer-events-none select-none tracking-tighter">
-            ES
-        </div>
-    </footer>
+    </div>
+    
+    <div class="absolute bottom-[-5%] right-[-10%] md:bottom-[-10%] md:right-[-5%] text-[10rem] md:text-[20rem] font-bold text-neutral-100 -z-0 pointer-events-none select-none tracking-tighter leading-none">
+        ES
+    </div>
+</footer>
 
 </body>
 </html>
