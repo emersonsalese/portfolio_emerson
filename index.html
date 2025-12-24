@@ -61,7 +61,15 @@
     </style>
 </head>
 <body class="bg-neutral-950 text-neutral-300 antialiased selection:bg-lime-400 selection:text-neutral-950 overflow-x-hidden">
-
+<div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-neutral-950 transition-opacity duration-700">
+    <div class="relative flex items-center justify-center">
+        <div class="absolute w-20 h-20 border-2 border-white/5 border-t-lime-400 rounded-full animate-spin"></div>
+        
+        <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center border border-white/10">
+            <span class="text-xl font-bold text-white tracking-tighter animate-pulse">ES</span>
+        </div>
+    </div>
+</div>
     <!-- Noise Overlay -->
     <div class="noise-bg"></div>
 
